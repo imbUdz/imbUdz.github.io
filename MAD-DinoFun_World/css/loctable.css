@@ -1,0 +1,17 @@
+#exAxis {
+  	font: 1em;
+  	fill: #000;
+}
+
+#left {
+	box-sizing: border-box;
+	background-color: white;
+ 	width: 93%;
+ 	height: 500px;
+ 	overflow-y: auto;
+ 	overflow-x: auto;
+}
+
+#left rect:hover {
+ 	cursor: pointer;
+}

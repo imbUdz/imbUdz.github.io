@@ -1,0 +1,41 @@
+.hist_chart {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.reset {
+  padding-left: 1em;
+  color: #ccc;
+}
+
+#hist_container .background.bar {
+  fill: #ccc;
+}
+
+#hist_container .foreground.bar {
+  fill: steelblue;
+}
+
+.hist_axis path, .hist_axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.hist_row {
+  float: left;
+}
+
+.hist_axis text {
+  font: 10px sans-serif;
+}
+
+.hist_brush rect.extent {
+  fill: steelblue;
+  fill-opacity: .125;
+}
+
+.hist_brush .resize path {
+  fill: #eee;
+  stroke: #666;
+}

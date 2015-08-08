@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>DinoFun World - MAD Team</title>
+
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/parallel.css">
+
+    <script src="js/vendor/d3.js"></script>
+    <script src="js/vendor/jquery-2.1.4.js"></script>
+    <script src="js/vendor/underscore.js"></script>
+    
+</head>
+
+<body>
+    <div id="body">
+        <div id="webheader">
+            <img src="img/Title.png">
+            <div id="webtitle">A Data Visualization Group Project by MAD team</div>
+        </div>
+
+    <!-- Navigation Bar -->
+        <div class="nav_bar">
+            <a href="index.html">
+                <div class="nav_btn"><span>Home</span></div>
+            </a>
+            <a href="pcp.html">
+                <div class="nav_btn"><span>PCP</span></div>
+            </a>
+            <a href="sunburst.html">
+                <div class="nav_btn"><span>Sunburst</span></div>
+            </a>
+            <a href="contact.html">
+                <div class="nav_btn_right"><span>Contact</span></div>
+            </a>
+        </div>
+
+    <!-- Parallel Coordinates Plot -->
+        <div id="pcp_container">
+            <h2>Parallel Coordinates Plot</h2>
+            <div id="header">
+              <button title="Zoom in on selected data" id="keep-data" disabled="disabled">Keep</button>
+              <button title="Remove selected data" id="exclude-data" disabled="disabled">Exclude</button>
+              <div class="controls">
+                <strong id="rendered-count"></strong>/<strong id="selected-count"></strong>
+                <div class="fillbar">
+                  <div id="selected-bar">
+                    <div id="rendered-bar">&nbsp;</div>
+                  </div>
+                </div>
+                Lines at <strong id="opacity"></strong> opacity.
+                <span class="settings">
+                  <button id="hide-ticks">Hide Ticks</button>
+                  <button id="show-ticks" disabled="disabled">Show Ticks</button>
+                </span>
+              </div>
+              <div style="clear:both;"></div>
+            </div>
+
+            <div id="pcp_chart">
+              <canvas id="pcp_background"></canvas>
+              <canvas id="pcp_foreground"></canvas>
+              <canvas id="highlight"></canvas>
+              <svg></svg>
+            </div>
+
+            <div id="wrap">
+              <div class="half" id="controls">
+                
+                <div class="little-box">
+                  <h3>Controls</h3>
+                  <p>
+                    <strong>Brush</strong>: Drag vertically along an axis.
+                    <br/>
+                    <strong>Remove Brush</strong>: Tap the axis background.
+                    <br/>
+                    <strong>Reorder Axes</strong>: Drag a label horizontally.
+                    <br/>
+                    <strong>Invert Axis</strong>: Tap an axis label.
+                    <br/>
+                    <strong>Remove Axis</strong>: Drag axis label to the left edge.
+                    <br/>
+                  </p>
+                </div>
+
+                <div class="little-box">
+                  <h3>Credits &amp; License</h3>
+                  <p>
+                    Adapted from examples by
+                    <br/>
+                    <a href="http://bl.ocks.org/1341021">Mike Bostock</a>, <a href="http://bl.ocks.org/1341281">Jason Davies</a> and <a href="http://bl.ocks.org/syntagmatic/raw/3150059/">Kai Chang</a>
+                    <br/>
+                  </p>
+                  <p>
+                    Copyright &copy; 2015, MAD
+                    <br/> All rights reserved. Released under the <a href="http://opensource.org/licenses/bsd-3-clause">BSD License</a>.
+                  </p>
+                  </p>
+                </div>
+                
+              </div>
+
+              <div class="half">
+                <h3>Clusters</h3>
+                <p id="pcp_legend">
+                </p>
+              </div>
+
+              <div style="display: none;">
+                <h3>Search by Repeat Visitor category <input type="text" id="search" placeholder="Search Repeat Visitor..."></input></h3>
+                <p id="repeat-list">
+                </p>
+              </div>
+            </div>
+          
+        </div>
+
+    <!-- Script Load -->
+      <script src="js/parallel.js"></script>
+      <script src="js/control.js"></script>
+    
+    </div>
+</body>
+</html>

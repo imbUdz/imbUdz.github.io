@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>DinoFun World - MAD Team</title>
+
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/loctable.css">
+    <link rel="stylesheet" type="text/css" href="css/barcharts.css">
+    <link rel="stylesheet" type="text/css" href="css/sunburst.css">
+
+    <script src="js/vendor/d3.js"></script>
+    <script src="js/vendor/jquery-2.1.4.js"></script>
+    <script src="js/vendor/crossfilter.js"></script>
+
+</head>
+
+<body>
+    <div id="body">
+        <div id="webheader">
+            <img src="img/Title.png">
+            <div id="webtitle">A Data Visualization Group Project by MAD team</div>
+        </div>
+
+    <!-- Navigation Bar -->
+        <div class="nav_bar">
+            <a href="index.html">
+                <div class="nav_btn"><span>Home</span></div>
+            </a>
+            <a href="pcp.html">
+                <div class="nav_btn"><span>PCP</span></div>
+            </a>
+            <a href="sunburst.html">
+                <div class="nav_btn"><span>Sunburst</span></div>
+            </a>
+            <a href="contact.html">
+                <div class="nav_btn_right"><span>Contact</span></div>
+            </a>
+        </div>
+
+    <!-- Sunburst & Location Table -->
+        <div id="sunburst_table_container">
+          <div>
+
+            <!-- Sunburst -->
+                <div id="sunburst_container">
+                    <div id="sunburst_chart">
+                        <div class="sb_loc_title">Sunburst Chart</div>
+                        <div id="cluster_selecter">
+                            Cluster Selection:<br>
+                            <select id="myList" onchange="select_cluster()">
+                                <option>All</option>
+                                <option>Everyone Folks</option>
+                                <option>Extremists</option>
+                                <option>Extremists (Repeat visits)</option>
+                                <option>Family with young kids</option>
+                                <option>Family with slightly older kids</option>
+                                <option>Moderates</option>
+                                <option>Moderate Adults</option>
+                                <option>Moderates (Repeat visits)</option>
+                                <option>Moderates who love a little adventure</option>
+                                <option>Moderates who love a little adventure (Repeat visits)</option>
+                                <option>Shows Lovers</option>
+                                <option>Thrill and Shows Lovers</option>
+                            </select>
+                        </div>
+                        <div style="float:right; width:120px;">
+                            <div id="legend_thrill" class="sblegend"><p>Thrill</p></div>
+                            <div id="legend_shows" class="sblegend"><p>Shows</p></div>
+                            <div id="legend_everyone" class="sblegend"><p>Everyone</p></div>
+                            <div id="legend_kiddie" class="sblegend"><p>Kiddie</p></div>
+                        </div>
+                        <div id="sb_chart">
+                            <div id="explanation" style="visibility: hidden;">
+                                <span id="percentage"></span><br/>
+                                visitors
+                            </div>
+                        </div>
+                        <div id="sequence"></div>
+
+
+                    </div>
+                </div>
+
+            <!-- Table -->
+                <div id="table_loc_container">
+                    <div class="sb_loc_title">Sequence of Locations</div>
+                    <div id="table_container">
+                            <div id="exAxis"></div>
+                            <div id="left"></div>
+                    </div>
+
+                    <div id="loc_seq_container">
+                        <div id="loc_seq"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    <!-- Crossfilter Histogram -->
+      <div id="hist_container">
+            <div class="hist_row">
+                <div id="barcharts">
+                    <div class="hist_row">
+                        <div id="shows-chart" class="hist_chart">
+                            <div class="hist_title">Shows</div>
+                        </div>
+                        <div id="kiddie-chart" class="hist_chart">
+                            <div class="hist_title">Kiddie</div>
+                        </div>
+                        <div id="everyone-chart" class="hist_chart">
+                            <div class="hist_title">Everyone</div>
+                        </div>
+                        <div id="thrill-chart" class="hist_chart">
+                            <div class="hist_title">Thrill</div>
+                        </div>
+                    </div>
+                    <div class="hist_row"> 
+                        <div id="checkin-chart" class="hist_chart">
+                            <div class="hist_title">Check-in</div>
+                        </div>
+                        <div id="duration-chart" class="hist_chart">
+                            <div class="hist_title">Durations</div>
+                        </div>
+                    </div>               
+                </div>
+            </div>
+        </div>
+
+    <!-- Script Load -->
+      <script src="js/dropdownlist.js"></script>
+      <script src="js/control.js"></script>
+      <script src="js/sequences.js"></script>
+      <script src="js/locationstable.js"></script> 
+      <script src="js/themepark_crossfilter.js"></script>
+    
+    </div>
+</body>
+</html>

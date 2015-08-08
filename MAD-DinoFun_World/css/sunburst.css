@@ -1,0 +1,79 @@
+#main {
+  float: left;
+  width: 560px;
+}
+
+#details {
+  float: right;
+  width: 400px;
+}
+
+#sidebar {
+  float: right;
+  width: 100px;
+}
+
+#cluster_selecter {
+  margin-bottom: 10px;
+}
+
+#sequence {
+  width: 100%;
+  height: 100px;
+  /*margin-bottom: 10px;*/
+}
+
+#sequence text {
+  font: 1.2em;
+  font-weight: bold;
+  fill: #fff;
+}
+
+#sb_chart {
+  position: relative;
+}
+
+#sb_chart path {
+  stroke: #fff;
+}
+
+#explanation {
+  position: absolute;
+  top: 265px;
+  left: 285px;
+  width: 140px;
+  text-align: center;
+  z-index: 1;
+}
+
+#percentage {
+  font-size: 2.5em;
+}
+
+.sblegend {
+  float: right;
+  width: 120px;
+  height: 45px;
+  font: 1em;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  margin: 1px 0;
+}
+
+#legend_thrill {
+  background-color: #de783b;
+}
+
+#legend_shows {
+  background-color: #6ab975;
+}
+
+#legend_everyone {
+  background-color: #5687d1;
+}
+
+#legend_kiddie {
+  background-color: #7b615c;
+}
